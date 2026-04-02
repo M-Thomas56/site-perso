@@ -1,0 +1,13 @@
+<p>L'ensemble de mes projets</p>
+
+<div class="container">
+
+<% @projets.each do |projet| %>
+<div class="cards">
+<li><%= projet.name %></li>
+<li><%= projet.content %></li>
+<li><%= projet.started_at %></li>
+<li><%= projet.link %></li>
+</div>
+<% end %>
+</div>
