@@ -1,5 +1,21 @@
-<h1>Bonjour, je m'appelle Marc Thomas. Bienvenue sur mon site.</h1>
+<h1 id="typewriter"></h1>
 
 <%= link_to "Mes projets", projects_path, class: "btn" %>
 <%= link_to "Mes contacts", contacts_path, class: "btn" %>
 <%= link_to "A propos de moi", about_path, class: "btn" %>
+
+<script>
+  const text = "Bonjour, je m'appelle Marc Thomas. Bienvenue sur mon site.";
+  const el = document.getElementById("typewriter");
+  let i = 0;
+
+  function type() {
+    if (i < text.length) {
+      el.textContent += text[i];
+      i++;
+      setTimeout(type, 55);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", type);
+</script>
