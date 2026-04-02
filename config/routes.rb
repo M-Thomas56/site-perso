@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: "pages#home"
-  get "project", to: "projects#index"
+  get "projects", to: "projects#index"
   get "about", to: "pages#about"
   get "contacts", to: "pages#about"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
